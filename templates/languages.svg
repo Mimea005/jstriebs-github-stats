@@ -16,11 +16,6 @@ svg {
   ry: 6px;
 }
 
-#gh-dark-mode-only:target #background {
-  fill: #0d1117;
-  stroke-width: 0.5px;
-}
-
 foreignObject {
   width: calc(100% - 10px - 32px);
   height: calc(100% - 10px - 24px);
@@ -36,11 +31,6 @@ h2 {
   fill: rgb(36, 41, 46);
 }
 
-#gh-dark-mode-only:target h2 {
-  color: #c9d1d9;
-  fill: #c9d1d9;
-}
-
 ul {
   list-style: none;
   padding-left: 0;
@@ -54,14 +44,6 @@ li {
   margin-right: 2ch;
   align-items: center;
   flex-wrap: nowrap;
-  transform: translateX(-500%);
-  animation: slideIn 2s ease-in-out forwards;
-}
-
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-  }
 }
 
 div.ellipsis {
@@ -76,11 +58,6 @@ div.ellipsis {
   vertical-align: top;
 }
 
-#gh-dark-mode-only:target .octicon {
-  color: #8b949e;
-  fill: #8b949e;
-}
-
 .progress {
   display: flex;
   height: 8px;
@@ -91,17 +68,9 @@ div.ellipsis {
   margin-bottom: 1em;
 }
 
-#gh-dark-mode-only:target .progress {
-  background-color: rgba(110, 118, 129, 0.4);
-}
-
 .progress-item {
   outline: 2px solid rgb(225, 228, 232);
   border-collapse: collapse;
-}
-
-#gh-dark-mode-only:target .progress-item {
-  outline: 2px solid #393f47;
 }
 
 .lang {
@@ -110,17 +79,44 @@ div.ellipsis {
   color: rgb(36, 41, 46);
 }
 
-#gh-dark-mode-only:target .lang {
-  color: #c9d1d9;
-}
-
 .percent {
   color: rgb(88, 96, 105)
 }
 
-#gh-dark-mode-only:target .percent {
-  color: #8b949e;
+@media (prefers-color-scheme:dark) {
+
+  #background {
+    fill: #0d1117;
+    stroke-width: 0.5px;
+  }
+
+  h2 {
+    color: #c9d1d9;
+    fill: #c9d1d9;
+  }
+
+  .octicon {
+    color: #8b949e;
+    fill: #8b949e;
+  }
+
+  .progress {
+    background-color: rgba(110, 118, 129, 0.4);
+  }
+
+  .progress-item {
+    outline: 2px solid #393f47;
+  }
+
+  .lang {
+    color: #c9d1d9;
+  }
+
+  .percent {
+    color: #8b949e;
+  }
 }
+
 </style>
 <g>
 <rect x="5" y="5" id="background" />
